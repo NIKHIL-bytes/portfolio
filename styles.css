@@ -89,7 +89,7 @@ p{
 /* Controls maximum space image can occupy */
 .img-term {
     max-width: 420px;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
 }
@@ -114,9 +114,53 @@ p{
 }
 
 /* Hover effect stays inside bounds */
-.img-wrapper:hover .men {
-    transform: scale(1.15);
+/* ================= CERTIFICATE MODAL ================= */
+.cert {
+    cursor: pointer;
+    transition: 0.3s ease;
 }
+
+.cert:hover {
+    color: orangered;
+    transform: translateX(5px);
+}
+
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.cert-modal.active {
+    display: flex;
+}
+
+.cert-modal-content img {
+    width: 50vw;
+    height: 66vh;
+    object-fit: contain;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .cert-modal-content img {
+        width: 100vw;
+        height: 50vh;
+        border-radius: 0;
+    }
+}
+
 /* ================= HAMBURGER MENU ================= */
 .hamburger {
     display: none;
@@ -141,6 +185,9 @@ p{
         transition: transform 0.4s ease;
         box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
+    nav{
+        width: 95%;
+    }
 
     .nav-links.active {
         transform: translateY(0);
@@ -150,6 +197,31 @@ p{
         display: block;
     }
 }
+/* ================= SKILLS ================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s ease;
+    background: #fafafa;
+}
+
+.skill-card:hover {
+    border-color: orangered;
+    color: orangered;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
 
 /* ================= SECTIONS ================= */
 section {
@@ -173,11 +245,42 @@ section {
     border: 2px solid #eee;
     border-radius: 15px;
 }
+.card a {
+    text-decoration: none;
+    color: inherit; /* removes blue link */
+    display: block;
+}
+
+.card a {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card a:hover {
+    color: orangered;
+    transform: translateX(5px);
+}
 
 /* ================= CONTACT ================= */
 .contact-box p {
     margin: 10px 0;
     font-size: 1.1rem;
+}
+/* ================= CONTACT LINKS FIX ================= */
+.contact-box a {
+    text-decoration: none;
+    color: inherit; /* removes blue link */
+    display: block;
+}
+
+.contact-box p {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-box p:hover {
+    color: orangered;
+    transform: translateX(5px);
 }
 
 /* ================= FOOTER ================= */
