@@ -194,7 +194,7 @@ img {
     }
 
     .hamburger {
-        display: block;
+        display: none;
     }
 }
 /* ================= SKILLS ================= */
@@ -300,3 +300,4 @@ footer {
         display: none;
     }
 }
+
