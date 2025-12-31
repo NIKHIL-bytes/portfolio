@@ -101,7 +101,7 @@ p{
     aspect-ratio: 1 / 1; /* keeps it square */
     overflow: hidden;
     border-radius: 25px; /* smooth edges */
-    border: 3px solid #eee;
+    border: 0px solid #eee;
     transition: 0.4s ease;
 }
 
@@ -109,7 +109,7 @@ p{
 .men {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* MOST IMPORTANT */
+    object-fit: contain; /* MOST IMPORTANT */
     transition: transform 0.5s ease;
 }
 
